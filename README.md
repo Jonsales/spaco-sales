@@ -4,9 +4,10 @@ Landing page responsiva para o Spaço Sales, Jacareí/SP.
 
 ## Arquivos
 - `index.html` — estrutura completa da página.
-- `styles.css` — design system, responsividade e animações.
-- `script.js` — navbar, scroll reveal e lightbox.
-- `assets/` — pasta reservada para fotografias e logo oficiais.
+- `assets/css/styles.css` — design system, responsividade e animações.
+- `assets/css/map.css` — estilos do mapa embutido (Google Maps).
+- `assets/scripts/script.js` — navbar, scroll reveal e lightbox.
+- `assets/` — pasta reservada para fotografias, logo oficiais, CSS e JS.
 
 ## Direção visual
 Conceito: **Natureza Sofisticada**
@@ -27,7 +28,7 @@ A forma mais simples é substituir cada bloco por:
 e manter as classes de imagem (`image-hero`, `image-tall`, etc.) para preservar o enquadramento.
 
 ## Logo
-O texto `SPAÇO SALES` no elemento `.brand` pode ser substituído pela imagem oficial da logo sem alterar a navegação.
+A logo oficial (`assets/logos/svg/`) já está integrada no header (`.brand-logo-light`/`.brand-logo-dark`, trocadas via `.scrolled`) e no footer.
 
 ## WhatsApp
 O número já está configurado para:
