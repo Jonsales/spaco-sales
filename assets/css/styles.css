@@ -223,7 +223,7 @@ img {
     max-width:850px;
     margin:22px 0
 }
-.hero h1 em,.section-heading h2 em,.editorial-copy h2 em,.experience h2 em,.birthday h2 em,.details h2 em,.quote-content em,.instagram h2 em,.location h2 em,.final-content h2 em {
+.hero h1 em,.section-heading h2 em,.editorial-copy h2 em,.experience h2 em,.birthday h2 em,.details h2 em,.quote-content em,.instagram h2 em,.location h2 em,.final-content h2 em,.faq-intro h2 em,.testimonial-feature-col h2 em {
     font-style:italic;
     font-weight:500
 }
@@ -303,6 +303,10 @@ img {
 }
 .text-link.dark {
     color:var(--forest);
+    margin-top:18px
+}
+.text-link.light {
+    color: #c1c0be;
     margin-top:18px
 }
 .editorial-photo {
@@ -689,6 +693,104 @@ img {
     font:500 clamp(50px,7vw,90px)/.95 var(--serif);
     margin:0
 }
+.testimonials {
+    background:var(--sand)
+}
+.testimonials-layout {
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:start
+}
+.testimonial-feature-col h2 {
+    font:500 clamp(38px,4.5vw,62px)/1.08 var(--serif);
+    margin:22px 0 40px
+}
+.testimonial-feature {
+    margin:0;
+    position:relative
+}
+.testimonial-mark {
+    display:block;
+    font:500 90px/1 var(--serif);
+    color:var(--olive);
+    opacity:.35;
+    margin-bottom:-10px
+}
+.testimonial-feature p {
+    font:500 28px/1.35 var(--serif);
+    margin:0 0 22px;
+    color:var(--ink)
+}
+.testimonial-feature cite,
+.testimonial-row cite {
+    font-style:normal;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:12px;
+    letter-spacing:.08em;
+    color:var(--wood)
+}
+.testimonial-stars {
+    color:var(--olive);
+    font-size:11px;
+    letter-spacing:.1em
+}
+.testimonials-note {
+    color:var(--muted);
+    margin:0 0 30px
+}
+.testimonial-list {
+    border-top:1px solid var(--line)
+}
+.testimonial-row {
+    padding:26px 0;
+    border-bottom:1px solid var(--line)
+}
+.testimonial-row p {
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
+    margin:0 0 12px
+}
+.faq {
+    padding:110px 0
+}
+.faq-grid {
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:70px
+}
+.faq-intro h2 {
+    font:500 clamp(38px,4.5vw,62px)/1.08 var(--serif);
+    margin:22px 0 20px
+}
+.faq-intro p {
+    color:var(--muted);
+    max-width:280px;
+    margin:0
+}
+.faq-list {
+    border-top:1px solid var(--line)
+}
+.faq-item {
+    padding:28px 0;
+    border-bottom:1px solid var(--line)
+}
+.faq-item h3 {
+    font:500 20px var(--serif);
+    margin:0 0 10px
+}
+.faq-item p {
+    color:var(--muted);
+    margin:0;
+    max-width:600px
+}
+.instagram {
+    background: linear-gradient(135deg, #8b8977, #52604c 48%, #3d4a39);
+    color: var(--cream);
+}
 .instagram-head {
     display:flex;
     justify-content:space-between;
@@ -927,6 +1029,17 @@ img {
     .instagram-grid {
         grid-template-columns:1fr 1fr
     }
+    .testimonials-layout {
+        grid-template-columns:1fr;
+        gap:45px
+    }
+    .faq-grid {
+        grid-template-columns:1fr;
+        gap:40px
+    }
+    .faq-intro p {
+        max-width:none
+    }
     .footer-grid {
         grid-template-columns:1fr 1fr;
         gap:45px
@@ -985,8 +1098,14 @@ img {
     .structure-grid {
         grid-template-columns:1fr
     }
-    .section-heading h2,.editorial-copy h2,.birthday h2,.details h2,.instagram h2,.location h2 {
+    .section-heading h2,.editorial-copy h2,.birthday h2,.details h2,.instagram h2,.location h2,.faq-intro h2,.testimonial-feature-col h2 {
         font-size:40px
+    }
+    .testimonial-mark {
+        font-size:60px
+    }
+    .testimonial-feature p {
+        font-size:22px
     }
     .birthday-copy {
         padding:75px 24px

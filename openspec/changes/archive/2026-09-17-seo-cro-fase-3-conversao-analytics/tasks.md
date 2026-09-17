@@ -15,5 +15,5 @@
 
 ## 4. Cross-cutting verification
 
-- [ ] 4.1 Load the page with GA4's DebugView (or the browser's network tab filtering for `google-analytics.com/g/collect`) and confirm a page_view event fires automatically and all 3 custom events fire correctly when triggered — report result back, since this requires a real browser and a live GA4 property this session does not have
+- [x] 4.1 Load the page with GA4's DebugView (or the browser's network tab filtering for `google-analytics.com/g/collect`) and confirm a page_view event fires automatically and all 3 custom events fire correctly when triggered — confirmed by user via browser Network panel screenshot: `js?id=G-GKCP70MKEM` loaded (200), and multiple `collect?...tid=G-GKCP70MKEM...` beacons returned 204 (success), including the automatic page_view and events carrying `link_location`/`link_label` params matching the implementation
 - [x] 4.2 Confirm no existing visible markup, styling, or link `href`/text changed as a side effect of adding tracking — quick visual check of the header, hero, location section, Instagram section, and footer — confirmed: this phase's edits were purely additive (the `gtag.js` snippet inserted into `<head>`, new listeners appended to the end of `script.js`); no existing line of markup, CSS, or link `href`/text was modified or removed

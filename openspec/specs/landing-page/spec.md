@@ -52,7 +52,7 @@ The layout SHALL adapt at exactly two breakpoints, both expressed as `max-width`
 - **THEN** `.whatsapp-float` hides its text label and becomes a fixed-size circular icon button
 
 ### Requirement: Ordered section inventory
-The page SHALL present its content as a fixed, ordered sequence of sections inside `<main>`, alternating between "editorial" sections (text + photo grid on a light background) and "cinematic" sections (full-bleed photo with dark overlay and centered/overlaid text): hero, intro (`#espaco`), experience, structure (`#estrutura`), birthday (`#eventos`), other-events, gallery (`#galeria`), details, quote, instagram, location (`#contato`), final-cta, footer.
+The page SHALL present its content as a fixed, ordered sequence of sections inside `<main>`, alternating between "editorial" sections (text + photo grid on a light background) and "cinematic" sections (full-bleed photo with dark overlay and centered/overlaid text): hero, intro (`#espaco`), experience, structure (`#estrutura`), birthday (`#eventos`), other-events, gallery (`#galeria`), details, quote, testimonials, faq (`#faq`), instagram, location (`#contato`), final-cta, footer.
 
 #### Scenario: Anchor navigation targets match section ids
 - **WHEN** a nav link or footer link points to `#espaco`, `#estrutura`, `#eventos`, `#galeria`, or `#contato`
@@ -109,6 +109,35 @@ The location section (`#contato`) SHALL include a link inviting visitors to leav
 #### Scenario: Review link is present and uses the venue's real Place ID
 - **WHEN** the location section is rendered
 - **THEN** it includes a link to `https://search.google.com/local/writereview?placeid=<the venue's real Place ID>`, next to the existing "Abrir no mapa" link
+
+### Requirement: Frequently asked questions section
+The page SHALL include a FAQ section (`#faq`) answering, using only facts confirmed by the venue owner (no invented numbers, prices, or policies): the venue's guest capacity, what is included in the rental, the pricing policy, and how to schedule a visit.
+
+#### Scenario: FAQ answers the four confirmed questions
+- **WHEN** the FAQ section is rendered
+- **THEN** it includes an entry stating the venue's real capacity (~70 pessoas), an entry listing what is included in the rental (mobiliário, sofá chaise, cadeiras de piscina, som, TV, cozinha equipada, estacionamento para 10 carros, 6 banheiros), an entry stating that pricing is "sob consulta", and an entry stating that visits are scheduled via WhatsApp
+
+#### Scenario: No fabricated pricing or capacity figures
+- **WHEN** the FAQ section is parsed
+- **THEN** it contains no specific price, currency value, or capacity number other than the confirmed ~70-guest figure
+
+### Requirement: Customer testimonials section
+The page SHALL include a testimonials section displaying real customer reviews, each with the reviewer's name, star rating, and review text exactly as originally written, sourced from the venue's actual Google Business Profile reviews — no invented, paraphrased, or composited reviews.
+
+#### Scenario: Testimonials show real reviewer names, ratings, and unaltered text
+- **WHEN** the testimonials section is rendered
+- **THEN** each testimonial displays a reviewer name, a star rating, and review text matching a real Google review of the venue, with no added or removed content from the original review text
+
+### Requirement: Expanded event-type content
+The "Outras celebrações" event-type list SHALL include descriptive, keyword-relevant text for each event type (including an explicit "Festa infantil" entry, matching the "festas infantis" claim already made in the page's title and meta description), without inventing details about pricing, availability, or capacity per event type beyond what the FAQ states.
+
+#### Scenario: Event-type list includes a dedicated children's party entry
+- **WHEN** the "Outras celebrações" section is rendered
+- **THEN** it includes a "Festa infantil" (or equivalent) entry alongside the existing 7 event types
+
+#### Scenario: Event-type descriptions do not introduce new unconfirmed facts
+- **WHEN** the expanded event-type descriptions are read
+- **THEN** they describe atmosphere/use-case in descriptive language, not specific prices, exact capacities, or availability claims not already stated elsewhere on the page
 
 ### Requirement: Browser tab favicon
 The page SHALL declare a favicon using the green logo icon (`logo-verde`), with a modern vector format as the primary source and a raster fallback, plus a separate opaque-background variant for iOS home-screen bookmarks.
