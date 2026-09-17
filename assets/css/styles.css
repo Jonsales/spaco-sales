@@ -332,6 +332,38 @@ img {
 .image-tall {
     aspect-ratio:4/5
 }
+.image-tall,
+.image-space-1,
+.image-space-2,
+.image-space-3,
+.image-space-4,
+.image-space-5,
+.image-space-6,
+.image-space-7,
+.image-detail {
+    width:100%;
+    object-fit:cover;
+    display:block
+}
+.image-hero,
+.image-wide,
+.image-birthday,
+.quote-image {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block
+}
+.gallery-item img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .7s var(--ease)
+}
+.gallery-item:hover img {
+    transform:scale(1.035)
+}
 .photo-note {
     display:block;
     font-size:10px;
@@ -424,14 +456,17 @@ img {
 .space-card:nth-child(7) {
     grid-column:span 7
 }
-.space-card .image-placeholder {
+.space-card .image-placeholder,
+.space-card img {
     aspect-ratio:4/3;
     transition:transform .7s var(--ease)
 }
-.space-card-large .image-placeholder {
+.space-card-large .image-placeholder,
+.space-card-large img {
     aspect-ratio:16/10
 }
-.space-card:hover .image-placeholder {
+.space-card:hover .image-placeholder,
+.space-card:hover img {
     transform:scale(.985)
 }
 .space-meta {
@@ -865,7 +900,8 @@ img {
     .space-card,.space-card-large,.space-card:nth-child(3),.space-card:nth-child(4),.space-card:nth-child(5),.space-card:nth-child(6),.space-card:nth-child(7) {
         grid-column:auto
     }
-    .space-card-large .image-placeholder {
+    .space-card-large .image-placeholder,
+    .space-card-large img {
         aspect-ratio:4/3
     }
     .space-meta h3 {
