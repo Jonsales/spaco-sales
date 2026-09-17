@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Spaço Sales é um espaço para eventos em Jacareí - SP, com salão, pergolado, piscina e área externa em meio à natureza. Ideal para aniversários, festas infantis, chá revelação e confraternizações. Fale conosco pelo WhatsApp.">
+  <meta name="description" content="Spaço Sales é um espaço para eventos em Jacareí - SP, com salão, piscina e área externa em meio à natureza. Ideal para aniversários, festas infantis, chá revelação e confraternizações. Fale conosco pelo WhatsApp.">
   <meta name="theme-color" content="#173b2b">
-  <title>Espaço para Eventos e Festas em Jacareí | Spaço Sales</title>
+  <title>Espaço para Festas e Eventos em Jacareí | Spaço Sales</title>
   <link rel="canonical" href="https://jonsales.github.io/spaco-sales/">
   <link rel="icon" type="image/svg+xml" href="assets/img/logos/svg/logo-verde.svg">
   <link rel="icon" type="image/png" href="assets/img/logos/png/logo-verde.png">
@@ -25,8 +25,8 @@
   </script>
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Espaço para Eventos e Festas em Jacareí | Spaço Sales">
-  <meta property="og:description" content="Salão, piscina e área externa em meio à natureza em Jacareí - SP. Ideal para aniversários, festas infantis e confraternizações.">
+  <meta property="og:title" content="Espaço para Festas e Eventos em Jacareí | Spaço Sales">
+  <meta property="og:description" content="Espaço para festas e eventos em Jacareí, com salão, piscina, área externa, churrasqueira e estacionamento. Conheça o Spaço Sales e agende uma visita.">
   <meta property="og:image" content="https://jonsales.github.io/spaco-sales/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -37,11 +37,19 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EventVenue",
+    "@type": "LocalBusiness",
+    "@id": "https://jonsales.github.io/spaco-sales/#business",
     "name": "Spaço Sales",
+    "description": "Espaço para festas e eventos em Jacareí, com salão, piscina, área externa, pergolado, churrasqueira e estacionamento.",
     "url": "https://jonsales.github.io/spaco-sales/",
     "telephone": "+5512988556812",
-    "image": "https://jonsales.github.io/spaco-sales/assets/img/hero.JPG",
+    "image": [
+      "https://jonsales.github.io/spaco-sales/assets/img/hero.JPG",
+      "https://jonsales.github.io/spaco-sales/assets/img/salao_principal.jpg",
+      "https://jonsales.github.io/spaco-sales/assets/img/area_externa.JPG"
+    ],
+    "logo": "https://jonsales.github.io/spaco-sales/assets/img/logos/svg/logo-principal-verde.svg",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "R. Xavante, 45 - Chácaras Reunidas Igarapés",
@@ -50,6 +58,7 @@
       "postalCode": "12330-230",
       "addressCountry": "BR"
     },
+    "hasMap": "https://www.google.com/maps/place/Spa%C3%A7o+Sales/@-23.291475,-46.0441583,17z/",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": -23.291475,
@@ -66,9 +75,8 @@
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Navegação principal">
       <a class="brand" href="#top" aria-label="Spaço Sales — início">
-        <img class="brand-logo brand-logo-light" src="assets/img/logos/svg/logo-principal-branco.svg" alt="Spaço Sales" width="562" height="187">
-        <img class="brand-logo brand-logo-dark" src="assets/img/logos/svg/logo-principal-verde.svg" alt="Spaço Sales" width="562" height="187">
-        <span class="brand-sub">EVENTOS · JACAREÍ</span>
+        <img class="brand-logo brand-logo-light" src="assets/img/logos/svg/logo-principal-branco.svg" alt="Logo principal branco do Spaço Sales" width="562" height="187">
+        <img class="brand-logo brand-logo-dark" src="assets/img/logos/svg/logo-principal-verde.svg" alt="Logo principal verde do Spaço Sales" width="562" height="187">
       </a>
 
       <div class="nav-links" id="navLinks">
@@ -89,12 +97,13 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-media image-hero" src="assets/img/hero.JPG" alt="Vista do Spaço Sales" width="2592" height="1728" fetchpriority="high">
+      <img class="hero-media image-hero" src="assets/img/hero.JPG" alt="Vista panorâmica do Spaço Sales" width="2592" height="1728" fetchpriority="high">
       <div class="hero-overlay"></div>
       <div class="hero-content container">
         <p class="eyebrow">Jacareí · São Paulo</p>
-        <h1 id="hero-title">Momentos especiais<br><em>merecem um lugar especial.</em></h1>
-        <p class="hero-copy">Salão, pergolado, piscina e área externa em meio à natureza — tudo em um só endereço em Jacareí, pronto para receber a sua festa do seu jeito.</p>
+        <h1 id="hero-title">Espaço para eventos <br>e festas <em>em Jacareí</em></h1>
+        <!-- <h1 id="hero-title">Momentos especiais<br><em>merecem um lugar especial.</em></h1> -->
+        <p class="hero-copy">Salão, piscina e área externa em meio à natureza, pronto para receber a sua festa do seu jeito.</p>
         <div class="hero-actions">
           <a class="button button-light" href="#espaco">Conheça o Spaço Sales</a>
           <a class="text-link light" href="https://wa.me/5512988556812?text=Ol%C3%A1!%20Quero%20conhecer%20o%20Spa%C3%A7o%20Sales." target="_blank" rel="noopener">Fale conosco <span>↗</span></a>
@@ -111,12 +120,12 @@
         <div class="editorial-copy reveal">
           <h2>Um lugar feito<br><em>para celebrar.</em></h2>
           <p>O Spaço Sales foi pensado para receber pessoas, criar encontros e transformar comemorações em boas lembranças.</p>
-          <p>Cercado por natureza e preparado para diferentes formatos de celebração, o espaço combina conforto, beleza e praticidade em um ambiente cuidadosamente cuidado.</p>
+          <p>Cercado por natureza e preparado para diferentes formatos de celebração. Nosso espaço combina conforto, beleza e praticidade em um ambiente cuidadosamente pensado.</p>
           <a class="text-link dark" href="#estrutura">Conheça nossa estrutura <span>→</span></a>
         </div>
         <div class="editorial-photo reveal">
           <img class="image-tall" src="assets/img/foto-espaco-01.jpeg" alt="O espaço do Spaço Sales" width="555" height="690" loading="lazy">
-          <span class="photo-note">Natureza ao redor · Jacareí/SP</span>
+          <span class="photo-note">Natureza ao redor</span>
         </div>
       </div>
     </section>
@@ -138,7 +147,9 @@
           <div class="section-kicker">Estrutura</div>
           <h2>Tudo o que você precisa<br><em>para celebrar.</em></h2>
         </div>
-        <p>Ambientes versáteis para criar a atmosfera que combina com o seu momento.</p>
+        <div class="section-text">
+          <p>Ambientes versáteis para criar a atmosfera que combina com o seu momento.</p>
+        </div>
       </div>
 
       <div class="structure-grid">
@@ -196,10 +207,10 @@
         <div><span>02</span><strong>Eventos corporativos</strong><small>Reunião ou treinamento fora do escritório, com espaço pra respirar. Ideal para eventos corporativos em Jacareí que pedem um ambiente diferente do escritório.</small></div>
         <div><span>03</span><strong>Churrascos</strong><small>Carvão aceso, mesa posta, gente querida por perto. Espaço para churrasco em Jacareí com churrasqueira e cozinha equipada.</small></div>
         <div><span>04</span><strong>Noivados</strong><small>Antes do grande dia, um começo pra comemorar em boa companhia. Cenário natural para festa de noivado em Jacareí.</small></div>
-        <div><span>05</span><strong>Chá revelação</strong><small>Azul, rosa ou surpresa — o momento em família. Um dos espaços mais procurados para chá revelação em Jacareí.</small></div>
+        <div><span>05</span><strong>Chá revelação</strong><small>Azul, rosa ou surpresa — o momento em família. Um ambiente acolhedor para celebrar seu chá revelação em Jacareí.</small></div>
         <div><span>06</span><strong>Chá de bebê</strong><small>Preparar a chegada com quem você ama por perto. Espaço para chá de bebê em Jacareí, com área interna e externa.</small></div>
         <div><span>07</span><strong>Festas familiares</strong><small>Aniversário de 1 aninho, Natal, Páscoa — sempre cabe mais uma mesa. Espaço para festa em família em Jacareí, com salão e área externa.</small></div>
-        <div><span>08</span><strong>Festa infantil</strong><small>Piscina, área externa e espaço de sobra para a criançada brincar em segurança. Espaço para festa infantil em Jacareí, com estrutura completa para aniversário de criança.</small></div>
+        <div><span>08</span><strong>Festa infantil</strong><small>Piscina, área externa e espaço de sobra para a criançada aproveitar a festa. Espaço para festa infantil em Jacareí, com estrutura completa para aniversário de criança.</small></div>
       </div>
     </section>
 
@@ -210,16 +221,19 @@
             <div class="section-kicker">Galeria</div>
             <h2>Veja o Spaço<br><em>pelos seus próprios olhos.</em></h2>
           </div>
-          <p>As fotografias reais do espaço serão protagonistas por aqui.</p>
+          <p>
+            Conheça os ambientes, detalhes e áreas do Spaço Sales
+            antes de planejar sua próxima celebração.
+          </p>
         </div>
       </div>
       <div class="gallery-grid container">
-        <button class="gallery-item g1 reveal" data-title="Salão principal"><img src="assets/img/foto-01.JPG" alt="Salão principal" width="1728" height="2592" loading="lazy"></button>
-        <button class="gallery-item g2 reveal" data-title="Natureza ao redor"><img src="assets/img/foto-02.JPG" alt="Natureza ao redor" width="1728" height="2592" loading="lazy"></button>
-        <button class="gallery-item g3 reveal" data-title="Área externa"><img src="assets/img/foto-03.jpeg" alt="Área externa" width="720" height="1280" loading="lazy"></button>
-        <button class="gallery-item g4 reveal" data-title="Detalhes do espaço"><img src="assets/img/foto-04.jpeg" alt="Detalhes do espaço" width="720" height="1280" loading="lazy"></button>
-        <button class="gallery-item g5 reveal" data-title="Pergolado"><img src="assets/img/foto-05.jpeg" alt="Pergolado" width="720" height="1280" loading="lazy"></button>
-        <button class="gallery-item g6 reveal" data-title="Momentos especiais"><img src="assets/img/foto-06.jpeg" alt="Momentos especiais" width="720" height="1280" loading="lazy"></button>
+        <button class="gallery-item g1 reveal" data-title="Salão principal"><img src="assets/img/foto-01.JPG" alt="Salão principal do Spaço Sales em Jacareí" width="1728" height="2592" loading="lazy"></button>
+        <button class="gallery-item g2 reveal" data-title="Natureza ao redor"><img src="assets/img/foto-02.JPG" alt="Área verde ao redor do Spaço Sales em Jacareí" width="1728" height="2592" loading="lazy"></button>
+        <button class="gallery-item g3 reveal" data-title="Área externa"><img src="assets/img/foto-03.jpeg" alt="Área verde ao redor do Spaço Sales em Jacareí" width="720" height="1280" loading="lazy"></button>
+        <button class="gallery-item g4 reveal" data-title="Detalhes do espaço"><img src="assets/img/foto-04.jpeg" alt="Detalhes da estrutura do Spaço Sales" width="720" height="1280" loading="lazy"></button>
+        <button class="gallery-item g5 reveal" data-title="Pergolado"><img src="assets/img/foto-05.jpeg" alt="Pergolado do Spaço Sales cercado por natureza" width="720" height="1280" loading="lazy"></button>
+        <button class="gallery-item g6 reveal" data-title="Momentos especiais"><img src="assets/img/foto-06.jpeg" alt="Ambiente do Spaço Sales preparado para celebrações" width="720" height="1280" loading="lazy"></button>
       </div>
     </section>
 
@@ -301,12 +315,30 @@
             <p>O Spaço Sales comporta em torno de 70 pessoas.</p>
           </div>
           <div class="faq-item">
+            <h3>O Spaço Sales possui piscina?</h3>
+            <p>
+              Sim. O espaço conta com piscina na área externa, além de salão,
+              churrasqueira, pergolado, cozinha e estacionamento.
+            </p>
+          </div>
+          <div class="faq-item">
             <h3>O que está incluso no aluguel?</h3>
             <p>Mobiliário (mesas e cadeiras), sofá chaise na área externa, cadeiras de piscina, som, TV, cozinha equipada, estacionamento para 10 carros e 6 banheiros (4 internos e 2 externos para a piscina).</p>
           </div>
           <div class="faq-item">
             <h3>Quanto custa alugar o Spaço Sales?</h3>
             <p>Os valores são sob consulta. Fale com a gente pelo WhatsApp para saber mais.</p>
+          </div>
+          <div class="faq-item">
+            <h3>O espaço possui estacionamento?</h3>
+            <p>Sim, possuímos estacionamento próprio para até 10 carros.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Quais tipos de eventos podem ser realizados?</h3>
+            <p>
+              O Spaço Sales recebe aniversários, festas infantis, chá revelação,
+              chá de bebê, confraternizações, churrascos, noivados e eventos corporativos.
+            </p>
           </div>
           <div class="faq-item">
             <h3>Como agendar uma visita?</h3>
@@ -337,6 +369,10 @@
         <div class="section-kicker">Onde estamos</div>
         <h2>Um espaço reservado<br><em>e acolhedor em Jacareí.</em></h2>
         <address>R. Xavante, 45 - Chácaras Reunidas Igarapés<br>Jacareí - SP, 12330-230</address>
+        <p class="location-note">
+          Localizado em Jacareí, o Spaço Sales também atende famílias e grupos
+          de São José dos Campos e outras cidades do Vale do Paraíba.
+        </p>
         <div class="location-actions">
           <a class="button button-dark" href="https://www.google.com/maps/place/Spa%C3%A7o+Sales/@-23.291475,-46.0441583,17z/data=!3m1!4b1!4m6!3m5!1s0x94cc33007f05a187:0x8e0ffcb14cf0bc90!8m2!3d-23.291475!4d-46.0441583!16s%2Fg%2F11vppzf6sv" target="_blank" rel="noopener">Abrir no mapa</a>
           <a class="text-link dark" href="https://share.google/LRpJRzkE2oKT8DzFM" target="_blank" rel="noopener">Avaliar no Google <span>→</span></a>
@@ -365,6 +401,7 @@
     <div class="container footer-grid">
       <div>
         <a class="brand brand-footer" href="#top"><img class="brand-logo" src="assets/img/logos/svg/logo-principal-branco.svg" alt="Spaço Sales" width="562" height="187" loading="lazy"><span class="brand-sub">EVENTOS · JACAREÍ</span></a>
+        <p>Espaço para festas e eventos em Jacareí, São Paulo.</p>
         <p>Momentos especiais merecem um lugar especial.</p>
       </div>
       <div>

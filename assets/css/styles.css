@@ -90,7 +90,7 @@ img {
     line-height:1;
 }
 .brand-logo {
-    height:45px;
+    height:65px;
     width:auto;
     transition:opacity .2s
 }
@@ -429,10 +429,11 @@ img {
     gap:60px;
     margin-bottom:60px
 }
-.section-heading>p {
+.section-text {
     max-width:310px;
     color:var(--muted);
-    margin:0 0 10px
+    margin:0 0 10px;
+    text-align: end;
 }
 .structure-grid {
     display:grid;
@@ -440,7 +441,7 @@ img {
     gap:56px 24px
 }
 .space-card {
-    grid-column:span 4
+    grid-column:span 5
 }
 .space-card-large {
     grid-column:span 7
@@ -449,7 +450,7 @@ img {
     grid-column:span 5
 }
 .space-card:nth-child(4) {
-    grid-column:span 5
+    grid-column:span 7
 }
 .space-card:nth-child(5) {
     grid-column:span 7
@@ -499,7 +500,8 @@ img {
     background:#e5dfd2;
     display:grid;
     grid-template-columns:1.05fr .95fr;
-    min-height:680px
+    min-height:680px;
+    padding: 0px !important;
 }
 .birthday-photo {
     min-height:680px
