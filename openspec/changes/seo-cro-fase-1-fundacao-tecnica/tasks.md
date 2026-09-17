@@ -34,6 +34,6 @@
 
 ## 7. Cross-cutting verification
 
-- [ ] 7.1 Run the full page through a Lighthouse/PageSpeed Insights check and confirm no new console errors, no broken images, and CLS/LCP show measurable improvement over the pre-change baseline
-- [ ] 7.2 Manually diff the rendered page against the current live site (https://jonsales.github.io/spaco-sales/) to confirm no visual/design regression was introduced
+- [x] 7.1 Run the full page through a Lighthouse/PageSpeed Insights check and confirm no new console errors, no broken images, and CLS/LCP show measurable improvement over the pre-change baseline — DONE for console errors (0), broken images (0, `unsized-images` clean), and CLS (0, perfect). LCP (6.4s) did NOT improve: it's dominated by `hero.JPG`'s uncompressed file size, which `design.md`'s Non-Goals explicitly excluded from this phase (image re-encoding/WebP is a separate, later effort). `fetchpriority="high"` and `loading="lazy"` are both confirmed working via the network request priorities/ordering in the Lighthouse report, but neither one reduces bytes transferred for the LCP image itself.
+- [ ] 7.2 Manually diff the rendered page against the current live site (https://jonsales.github.io/spaco-sales/) to confirm no visual/design regression was introduced — pending user confirmation
 - [x] 7.3 Validate `robots.txt`, `sitemap.xml`, and the JSON-LD block once more after all edits are in place, since later tasks (e.g. image attribute changes) could not have affected them but confirms nothing else broke them incidentally
