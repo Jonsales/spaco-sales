@@ -64,7 +64,7 @@ The page SHALL present its content as a fixed, ordered sequence of sections insi
 
 #### Scenario: Gallery uses an irregular masonry-like grid with a lightbox
 - **WHEN** a gallery item is clicked
-- **THEN** the lightbox opens showing that item's `data-title`, and closes on close-button click, backdrop click, or Escape key
+- **THEN** the lightbox opens showing that item's own photo (the same image shown in the gallery grid) together with its `data-title` caption, and closes on close-button click, backdrop click, or Escape key
 
 ### Requirement: Scroll-driven interactivity
 The page SHALL provide three scroll-related behaviors implemented in `assets/scripts/script.js`: a header background/color swap after 40px of scroll, a one-time reveal-on-scroll animation for elements marked `.reveal` (via `IntersectionObserver`, threshold 0.12), and smooth in-page scrolling for same-page anchor links.
@@ -95,6 +95,20 @@ The location section (`#contato`) SHALL display a real, embedded Google Map in p
 #### Scenario: No redundant pin overlay
 - **WHEN** the map is displayed
 - **THEN** no separate "SPAÇO SALES" badge/pin overlay is rendered on top of it, since the embedded map's own marker already identifies the location
+
+### Requirement: Direct phone contact link
+The page SHALL provide a `tel:` link to the venue's phone number alongside the existing WhatsApp contact links, so visitors who prefer calling can do so with one tap.
+
+#### Scenario: Phone link is present and dials the venue's number
+- **WHEN** the page is rendered
+- **THEN** at least one `<a href="tel:+5512988556812">` link is present near an existing WhatsApp contact link
+
+### Requirement: Google review call-to-action
+The location section (`#contato`) SHALL include a link inviting visitors to leave a review on Google, pointing to the Google review-writing URL built from the venue's real Google Maps Place ID (the same Place ID already used by the existing "Abrir no mapa" link) — no invented or placeholder review content.
+
+#### Scenario: Review link is present and uses the venue's real Place ID
+- **WHEN** the location section is rendered
+- **THEN** it includes a link to `https://search.google.com/local/writereview?placeid=<the venue's real Place ID>`, next to the existing "Abrir no mapa" link
 
 ### Requirement: Browser tab favicon
 The page SHALL declare a favicon using the green logo icon (`logo-verde`), with a modern vector format as the primary source and a raster fallback, plus a separate opaque-background variant for iOS home-screen bookmarks.

@@ -55,3 +55,19 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
     if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
+
+function gaEvent(name,params){
+  if(typeof gtag==='function'){gtag('event',name,params||{});}
+}
+
+document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link=>{
+  link.addEventListener('click',()=>gaEvent('contato_whatsapp',{link_location:link.className||'whatsapp'}));
+});
+
+document.querySelectorAll('.location-actions a').forEach(link=>{
+  link.addEventListener('click',()=>gaEvent('interacao_localizacao',{link_label:link.textContent.trim()}));
+});
+
+document.querySelectorAll('a[href^="https://www.instagram.com/spaco.sales"]').forEach(link=>{
+  link.addEventListener('click',()=>gaEvent('clique_instagram',{link_location:link.className||'instagram'}));
+});
