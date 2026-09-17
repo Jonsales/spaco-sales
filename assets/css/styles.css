@@ -613,7 +613,10 @@ img {
     width:min(900px,90vw)
 }
 .lightbox-image {
-    aspect-ratio:16/10
+    aspect-ratio:16/10;
+    width:100%;
+    display:block;
+    object-fit:cover
 }
 .lightbox-content p {
     color:#fff;

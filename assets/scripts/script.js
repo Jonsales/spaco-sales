@@ -30,13 +30,16 @@ reveals.forEach(el=>observer.observe(el));
 
 const lightbox=document.getElementById('lightbox');
 const lightboxTitle=document.getElementById('lightboxTitle');
-const lightboxLabel=document.getElementById('lightboxLabel');
+const lightboxImage=document.getElementById('lightboxImage');
 const closeLightbox=()=>{lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');document.body.style.overflow='';};
 
 document.querySelectorAll('.gallery-item').forEach(item=>{
   item.addEventListener('click',()=>{
-    lightboxTitle.textContent=item.dataset.title||'Spaço Sales';
-    lightboxLabel.textContent=item.dataset.title||'FOTO';
+    const title=item.dataset.title||'Spaço Sales';
+    const photo=item.querySelector('img');
+    lightboxTitle.textContent=title;
+    lightboxImage.src=photo?.src||'';
+    lightboxImage.alt=photo?.alt||title;
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';

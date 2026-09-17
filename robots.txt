@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jonsales.github.io/spaco-sales/sitemap.xml
