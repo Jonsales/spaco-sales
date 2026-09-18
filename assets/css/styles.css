@@ -86,7 +86,7 @@ img {
 }
 .brand {
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     line-height:1;
 }
 .brand-logo {
@@ -109,9 +109,6 @@ img {
     margin-top:9px;
     margin-left: 5px;
     opacity:.72
-}
-.brand-footer .brand-logo {
-    height:36px
 }
 .nav-links {
     display:flex;
@@ -221,7 +218,7 @@ img {
 .hero h1 {
     font:500 clamp(48px,7vw,88px)/1.02 var(--serif);
     max-width:850px;
-    margin:22px 0
+    margin: 0px 0px 32px 0px;
 }
 .hero h1 em,.section-heading h2 em,.editorial-copy h2 em,.experience h2 em,.birthday h2 em,.details h2 em,.quote-content em,.instagram h2 em,.location h2 em,.final-content h2 em,.faq-intro h2 em,.testimonial-feature-col h2 em {
     font-style:italic;
@@ -244,12 +241,20 @@ img {
     letter-spacing:.08em;
     font-weight:700;
     display:inline-flex;
-    gap:12px;
-    align-items:center
+    gap:2px;
+    align-items:center;
 }
 .text-link span {
     font-size:18px;
     transition:.3s
+}
+.text-link svg {
+    display:block;
+    flex-shrink:0;
+    width:16px;
+    height:16px;
+    margin-top: 2px;
+    fill:currentColor
 }
 .text-link:hover span {
     transform:translateX(4px)
@@ -877,10 +882,11 @@ img {
     color:#fff
 }
 .footer-grid p {
-    max-width:300px;
+    max-width:340px;
     color:rgba(255,255,255,.55);
     font-size:13px;
-    margin-top:25px
+    margin-top: 0px;
+    margin-left: 7px;
 }
 .footer h3 {
     font-size:10px;
@@ -897,6 +903,18 @@ img {
 }
 .footer-grid a:hover {
     color:#fff
+}
+.footer-grid>div:nth-child(n+2) a.footer-whatsapp,.footer-grid>div:nth-child(n+2) a.footer-instagram,.footer-grid>div:nth-child(n+2) span.footer-location {
+    display:flex;
+    align-items:center;
+    gap: 5px;
+}
+.footer-whatsapp svg,.footer-instagram svg,.footer-location svg {
+    display:block;
+    flex-shrink:0;
+    width:14px;
+    height:14px;
+    fill:currentColor
 }
 .footer-bottom {
     border-top:1px solid rgba(255,255,255,.12);
