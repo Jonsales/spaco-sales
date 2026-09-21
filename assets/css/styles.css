@@ -194,7 +194,7 @@ img {
     color:#fff;
     overflow:hidden
 }
-.hero-media,.hero-overlay,.final-image,.final-overlay,.quote-image,.quote-overlay,.experience-image {
+.hero-media,.hero-overlay,.final-image,.final-overlay,.quote-image,.quote-overlay,.experience-image,.experience-overlay {
     position:absolute;
     inset:0
 }
@@ -392,11 +392,8 @@ img {
 .experience-image {
     inset:0
 }
-.experience-image:after {
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(0deg,rgba(10,24,17,.72),transparent 65%)
+.experience-overlay {
+    background: linear-gradient(0deg, rgb(10 24 17), transparent 75%);
 }
 .experience-content {
     position:relative;
@@ -809,14 +806,27 @@ img {
     grid-template-columns:repeat(4,1fr);
     gap:14px
 }
-.instagram-grid .image-placeholder {
-    aspect-ratio:1
+.instagram-photo {
+    aspect-ratio:1;
+    display:block;
+    overflow:hidden;
+    position:relative
+}
+.instagram-photo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s var(--ease)
 }
 .instagram-grid a {
     transition:transform .5s var(--ease)
 }
 .instagram-grid a:hover {
     transform:translateY(-5px)
+}
+.instagram-photo:hover img {
+    transform:scale(1.035)
 }
 .location {
     display:grid;
