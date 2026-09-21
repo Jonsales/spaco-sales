@@ -27,6 +27,12 @@ From `404.html`, a relative `#estrutura` would try to scroll within the (section
 **`noindex`, no canonical, but same GA4 tag.**
 Matches how the rest of the site's `seo-metadata` capability treats crawl directives, applied to a page that must never be indexed. GA4 stays so broken-link traffic is visible in existing dashboards - no new analytics property or event needed.
 
+**Page-specific styling lives in a new `assets/css/404.css`, not in `styles.css`.**
+The 404 page needs two things `index.html` never does: a header that always renders in its "scrolled" appearance (no hero image behind it to justify the transparent overlay state), and the not-found content layout. Adding these as `styles.css` rules would grow the shared stylesheet with rules only one page uses. Alternative considered: reuse the existing `.scrolled` class (toggled by `script.js` based on `window.scrollY`) by adding it statically in the HTML - rejected because `script.js` unconditionally recomputes and can remove that class on load (`scrollY` starts at 0), so the state wouldn't hold. Instead, `404.css` selects on a `.not-found-page` class on `<body>` and duplicates the same visual values (`.site-header` background/color/shadow, logo swap, nav button colors) as permanent, unconditional rules for this page only, without touching `script.js` or the shared `.scrolled` behavior used by `index.html`.
+
+**No separate "quick links" block in the page content.**
+Originally the not-found content repeated links to the main sections. Removed: the shared header nav and footer already link to every main section (`/#estrutura`, `/#eventos`, `/#galeria`, `/#contato`), so a second copy in the content area was redundant.
+
 ## Risks / Trade-offs
 
 - **Markup drift**: hand-duplicated header/footer can drift from `index.html` over time (e.g. new nav link added to one but not the other) → Mitigation: note the duplication in `README.md` so future edits to the header/footer are a two-file change; low risk given the page rarely changes.

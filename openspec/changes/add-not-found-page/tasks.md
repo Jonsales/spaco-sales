@@ -16,10 +16,16 @@
 - [x] 3.1 Build a centered content section (reusing existing typography/spacing classes such as `.section`, `.section-kicker`, heading styles) that states the page was not found, and verify it renders consistently with the site's visual language at desktop width
 - [x] 3.2 Add a primary button linking to `/` (home page), and verify activating it navigates to the site root
 - [x] 3.3 Add a WhatsApp CTA button in the content section using the same prefilled message pattern as the main page's CTAs, and verify the link opens a WhatsApp chat in a new tab
-- [x] 3.4 Add quick links to the main sections (Estrutura, Eventos, Galeria, Contato) using the same `/#section` pattern as the header nav, and verify each one navigates correctly
+- [x] 3.4 ~~Add quick links to the main sections in the content section~~ — superseded: removed the separate quick-links block since the shared header nav and footer already link to every section (`/#estrutura`, `/#eventos`, `/#galeria`, `/#contato`); verified those links are present and correct in tasks 2.2 and 2.3
 
-## 4. Verification
+## 4. Page-specific styling
 
-- [x] 4.1 Open `404.html` directly in a browser and confirm layout matches `index.html`'s header/footer at desktop, tablet (900px), and mobile (560px) breakpoints
-- [ ] 4.2 Deploy (or preview via GitHub Pages) and confirm requesting a nonexistent path under the domain returns HTTP 404 with `404.html`'s content
-- [x] 4.3 Validate the page's HTML head against the `not-found-page` spec scenarios (noindex present, no canonical, GA4 tag matches) by manual inspection
+- [x] 4.1 Create `assets/css/404.css` and link it from `404.html` after `styles.css`, and verify it loads with a 200 response
+- [x] 4.2 Add a `.not-found-page` class to `<body>` and, in `404.css`, make the header always render in its "scrolled" appearance (cream background, forest logo/text, dark nav button) regardless of scroll position, and verify visually that the header looks scrolled immediately on load
+- [x] 4.3 Move the `.not-found`/`.not-found-content` layout rules out of `assets/css/styles.css` into `404.css`, and verify `styles.css` no longer contains page-specific 404 rules
+
+## 5. Verification
+
+- [x] 5.1 Open `404.html` directly in a browser and confirm layout matches `index.html`'s header/footer at desktop, tablet (900px), and mobile (560px) breakpoints, and that the header renders scrolled-style even at the top of the page
+- [ ] 5.2 Deploy (or preview via GitHub Pages) and confirm requesting a nonexistent path under the domain returns HTTP 404 with `404.html`'s content
+- [x] 5.3 Validate the page's HTML head against the `not-found-page` spec scenarios (noindex present, no canonical, GA4 tag matches) by manual inspection

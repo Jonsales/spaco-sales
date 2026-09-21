@@ -1,0 +1,41 @@
+/* Estilos específicos da página 404 — não usados em index.html */
+
+.not-found-page .site-header {
+    background:rgba(244,240,231,.94);
+    backdrop-filter:blur(14px);
+    color:var(--forest);
+    box-shadow:0 1px 0 var(--line)
+}
+.not-found-page .brand-logo-light {
+    display:none
+}
+.not-found-page .brand-logo-dark {
+    display:block
+}
+.not-found-page .button-nav {
+    background:var(--forest);
+    color:#fff
+}
+
+.not-found {
+    min-height:min(760px,100svh);
+    display:flex;
+    align-items:center
+}
+.not-found-content {
+    max-width:640px
+}
+.not-found-content h1 {
+    font:500 clamp(40px,6vw,68px)/1.05 var(--serif);
+    margin:0 0 24px
+}
+.not-found-content h1 em {
+    font-style:italic;
+    font-weight:500
+}
+.not-found-content .hero-copy {
+    color:var(--muted)
+}
+.not-found-content .hero-actions {
+    flex-wrap:wrap
+}
