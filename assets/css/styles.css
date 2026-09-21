@@ -960,6 +960,34 @@ img {
     height:22px;
     fill:currentColor
 }
+.not-found {
+    min-height:min(760px,100svh);
+    display:flex;
+    align-items:center
+}
+.not-found-content {
+    max-width:640px
+}
+.not-found-content h1 {
+    font:500 clamp(40px,6vw,68px)/1.05 var(--serif);
+    margin:0 0 24px
+}
+.not-found-content h1 em {
+    font-style:italic;
+    font-weight:500
+}
+.not-found-content .hero-copy {
+    color:var(--muted)
+}
+.not-found-content .hero-actions {
+    flex-wrap:wrap;
+    margin-bottom:45px
+}
+.not-found-links {
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px
+}
 .reveal {
     opacity:0;
     transform:translateY(25px);
