@@ -43,7 +43,7 @@
 :root {
     --forest:#173b2b;
     --forest-2:#24533d;
-    --olive:#6c7652;
+    --olive:#5c6446;
     --cream:#f4f0e7;
     --sand:#ded4c2;
     --wood:#725a42;
@@ -973,7 +973,7 @@ img {
     padding-top:20px;
     display:flex;
     justify-content:space-between;
-    color:rgba(255,255,255,.4);
+    color:rgba(255,255,255,.55);
     font-size:10px
 }
 .whatsapp-float {
