@@ -27,5 +27,5 @@
 ## 5. Verification
 
 - [x] 5.1 Open `404.html` directly in a browser and confirm layout matches `index.html`'s header/footer at desktop, tablet (900px), and mobile (560px) breakpoints, and that the header renders scrolled-style even at the top of the page
-- [ ] 5.2 Deploy (or preview via GitHub Pages) and confirm requesting a nonexistent path under the domain returns HTTP 404 with `404.html`'s content
+- [x] 5.2 Deploy (or preview via GitHub Pages) and confirm requesting a nonexistent path under the domain returns HTTP 404 with `404.html`'s content — confirmed by the user in the browser against the live GitHub Pages deployment
 - [x] 5.3 Validate the page's HTML head against the `not-found-page` spec scenarios (noindex present, no canonical, GA4 tag matches) by manual inspection
