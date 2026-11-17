@@ -71,3 +71,7 @@ document.querySelectorAll('.location-actions a').forEach(link=>{
 document.querySelectorAll('a[href^="https://www.instagram.com/spaco.sales"]').forEach(link=>{
   link.addEventListener('click',()=>gaEvent('clique_instagram',{link_location:link.className||'instagram'}));
 });
+
+document.querySelectorAll('a[href^="https://g.page/r/"]').forEach(link=>{
+  link.addEventListener('click',()=>gaEvent('clique_avaliar_google',{link_location:'depoimentos'}));
+});
